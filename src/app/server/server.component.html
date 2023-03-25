@@ -1,0 +1,50 @@
+<!--Data binding must return a string at the end-->
+<!--String interpolation-->
+<p>Server name is {{serverName}}</p>
+<p>{{serverCreationStatus}}</p>
+<!--Data binding to html attributes-->
+<button [disabled]="setDisabled">Hello</button>
+<!--Event binding-->
+<button (click)="onCreateServer()">add server</button>
+<input class="form-control" (input)="onUpdateServerName($event)">
+<!--2 Way binding-->
+<input class="form-control" [(ngModel)]="serverName">
+<!--Directives-->
+<!--ngif else directives-->
+<p *ngIf="enableThisElement;else:elseBlock">hello</p>
+<ng-template #elseBlock>
+    <p>hi</p>
+</ng-template>
+<!--ngStyle-->
+<p [ngStyle]="{backgroundColor:'red'}">ng style </p>
+<p [ngClass]="{redBackground:redBackground==='red'}">ng class</p>
+<!--ng for -->
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let i of testArray let j=index">{{j}}</div>
+    </div>
+</div>
+
+<!-- Pass from Parent to child-->
+<div class="container">
+    {{fromParent}}
+</div>
+
+<!--Pass from child to parent-->
+<div class="container">
+    <button type="button" class="btn btn-primary" (click)="onButtonClicked()">On Button clicked</button>
+</div>
+<!--Local Reference-->
+<div class="container">
+    <button type="button" class="btn btn-primary" (click)="localReference(testReference)" #testReference>Local Reference</button>
+</div>
+
+<!--created directive-->
+<p serverDirective>hello</p>
+
+<!--created directive using renderer-->
+<p BetterServerDirective>hello</p>
+
+
+<!--created directive using renderer specify color-->
+<p highlightColor="red" defaultColor="blue" BetterServerDirective>hello</p>

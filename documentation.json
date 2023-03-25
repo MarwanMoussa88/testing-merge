@@ -1,0 +1,999 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [
+        {
+            "name": "BetterServerDirective",
+            "id": "directive-BetterServerDirective-0c132fafc6d82cbe3f9f766f8c38e2a15f42fee10af16e4cf66ceba677570cc97044c98ba5eba0f77e47514a844c3a3f2e9891f07811f079a56d0f25ee41fbf3",
+            "file": "src/app/better-server.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding, Input } from '@angular/core';\n\n@Directive({\n  selector: '[BetterServerDirective]'\n})\nexport class BetterServerDirective implements OnInit {\n\n  @HostBinding('style.backgroundColor') backgroundColor:string=\"\"\n  @Input() highlightColor:string=\"transparent\"\n  @Input() defaultColor:string=\"transparent\"\n  constructor(private element:ElementRef,private renderer:Renderer2) { }\n  ngOnInit(): void {\n  }\n  \n  @HostListener('mouseenter') mouseOver(eventData:Event)\n  {\n    \n  //  this.renderer.setStyle(this.element.nativeElement,'background-color','yellow')\n    this.backgroundColor=this.highlightColor\n  }\n  @HostListener('mouseleave') mouseLeave(eventData:Event)\n  {\n    \n    //this.renderer.setStyle(this.element.nativeElement,'background-color','transparent')\n    this.backgroundColor=this.defaultColor\n  }\n\n}\n",
+            "selector": "[BetterServerDirective]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "defaultColor",
+                    "defaultValue": "\"transparent\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "highlightColor",
+                    "defaultValue": "\"transparent\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "style.backgroundColor",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 8,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [
+                {
+                    "name": "mouseenter",
+                    "args": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15
+                },
+                {
+                    "name": "mouseleave",
+                    "args": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "argsDecorator": [],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "backgroundColor",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'style.backgroundColor'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "mouseLeave",
+                    "args": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'mouseleave'"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "mouseOver",
+                    "args": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'mouseenter'"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "eventData",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "implements": [
+                "OnInit"
+            ],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "element",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "element",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "serverDirective",
+            "id": "directive-serverDirective-a3aa14d709bd296d52f4444fc01377930030e0ef2ac5e50b1877684f3932e1912e85602c3c776b22ba7678d4179e8480f483824bf26cdaa664f77d09e932ea08",
+            "file": "src/app/server/server.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive, ElementRef, OnInit } from \"@angular/core\";\r\n\r\n@Directive({\r\n    selector:\"[serverDirective]\"\r\n})\r\nexport class serverDirective implements OnInit\r\n{\r\n    constructor(private element:ElementRef){\r\n    }\r\n    ngOnInit(): void {\r\n        console.log(\"a\")\r\n        console.log(this.element)\r\n        this.element.nativeElement.style.backgroundColor=\"blue\"\r\n    }\r\n}",
+            "selector": "[serverDirective]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "implements": [
+                "OnInit"
+            ],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "element",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 7,
+                "jsdoctags": [
+                    {
+                        "name": "element",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-09887e4144f6c0e8719b0843f098eb17c771d6bd010ee40e3de6b4e3a844464f067e43c56060e7eb9c669b393fd1bc0aa002fd4efe2c499640c2509b5120bbcf",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'testApp'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "recieveFromChild",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  //how to call componenent\n  /**\n   * '['app-root'] select by attribute\n   * '.app-root' select by class\n   */\n  selector: 'app-root',\n  //html\n  templateUrl: './app.component.html',\n  //css\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'testApp';\n\n\n  recieveFromChild(event:any)\n  {\n    console.log(event)\n\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<!--<app-server [fromParentComponenent]=\"title\" (eventFromChild)=\"recieveFromChild($event)\"></app-server>-->\r\n<app-general-modal></app-general-modal>"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-6f6493221cac8afeb21ea7cdf697b60b4c92c0255778b8e0596b18085f4f5de087ea5696d1781baf2350d513e423800a3d93188ef787ed5a209a1bb125937b32",
+            "file": "src/app/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>button works!</p>\n"
+        },
+        {
+            "name": "ServerComponent",
+            "id": "component-ServerComponent-6645cbee3a13a28fb71004c8fcc1f9b6eb8cdc1ae55482ff4dcb20ce1b4cd6ca731ad6d100f4ce68e00d3833130f4c711e35bcb1e06f30476021ee0c66e58da1",
+            "file": "src/app/server/server.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-server",
+            "styleUrls": [
+                "./server.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./server.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "fromParentComponenent",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "eventFromChild",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "enableThisElement",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "getServerName",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "redBackground",
+                    "defaultValue": "\"red\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "serverCreationStatus",
+                    "defaultValue": "\"No server was created\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "serverName",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "setDisabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "testArray",
+                    "defaultValue": "[1,2,3,4,5,6]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "testReferenceElement",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": true,
+                    "description": "",
+                    "line": 19,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'testReference'"
+                        }
+                    ]
+                },
+                {
+                    "name": "twoWayBinding",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "localReference",
+                    "args": [
+                        {
+                            "name": "htmlReference",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 45,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nLocal Reference\n",
+                    "description": "<p>Local Reference</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1078,
+                                "end": 1091,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "htmlReference"
+                            },
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "pos": 1072,
+                                "end": 1077,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>HTML Reference</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "onButtonClicked",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nPass data to parent\n",
+                    "description": "<p>Pass data to parent</p>\n"
+                },
+                {
+                    "name": "onCreateServer",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onUpdateServerName",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { AfterContentInit, Component, DoCheck, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';\n\n@Component({\n  selector: 'app-server',\n  templateUrl: './server.component.html',\n  styleUrls: ['./server.component.scss']\n})\nexport class ServerComponent{\n\n  @Output() eventFromChild =new EventEmitter()\n  serverName:string =\"\";\n  setDisabled:boolean = true;\n  serverCreationStatus = \"No server was created\"\n  twoWayBinding:string=\"\"\n  enableThisElement:boolean=true\n  redBackground:string =\"red\"\n  testArray=[1,2,3,4,5,6]\n  @Input(\"fromParentComponenent\") fromParent=\"\"\n  @ViewChild(\"testReference\") testReferenceElement?:ElementRef;\n  getServerName=()=>{\n    return this.serverName\n  }\n\n  constructor() {\n  \n    setTimeout(() => {\n      this.setDisabled=false\n    }, 3000);\n  }\n\n  onCreateServer()\n  {\n    this.serverCreationStatus=\"Server was added successfully\"\n  }\n  \n  onUpdateServerName(event:any)\n  {\n    console.log(event.target)\n    this.serverName=event.target.value\n  }\n  /**\n   * Local Reference\n   * @param htmlReference HTML Reference \n   */\n  localReference(htmlReference:any)\n  {\n      console.log(this.testReferenceElement?.nativeElement)\n  }\n  /**\n   * Pass data to parent\n   */\n  onButtonClicked()\n  {\n      console.log(\"FromChild\")\n      this.eventFromChild.emit(\"marwan\")\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".redBackground\r\n{\r\n    background-color: red;\r\n}",
+                    "styleUrl": "./server.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 22
+            },
+            "templateData": "<!--Data binding must return a string at the end-->\n<!--String interpolation-->\n<p>Server name is {{serverName}}</p>\n<p>{{serverCreationStatus}}</p>\n<!--Data binding to html attributes-->\n<button [disabled]=\"setDisabled\">Hello</button>\n<!--Event binding-->\n<button (click)=\"onCreateServer()\">add server</button>\n<input class=\"form-control\" (input)=\"onUpdateServerName($event)\">\n<!--2 Way binding-->\n<input class=\"form-control\" [(ngModel)]=\"serverName\">\n<!--Directives-->\n<!--ngif else directives-->\n<p *ngIf=\"enableThisElement;else:elseBlock\">hello</p>\n<ng-template #elseBlock>\n    <p>hi</p>\n</ng-template>\n<!--ngStyle-->\n<p [ngStyle]=\"{backgroundColor:'red'}\">ng style </p>\n<p [ngClass]=\"{redBackground:redBackground==='red'}\">ng class</p>\n<!--ng for -->\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col\" *ngFor=\"let i of testArray let j=index\">{{j}}</div>\n    </div>\n</div>\n\n<!-- Pass from Parent to child-->\n<div class=\"container\">\n    {{fromParent}}\n</div>\n\n<!--Pass from child to parent-->\n<div class=\"container\">\n    <button type=\"button\" class=\"btn btn-primary\" (click)=\"onButtonClicked()\">On Button clicked</button>\n</div>\n<!--Local Reference-->\n<div class=\"container\">\n    <button type=\"button\" class=\"btn btn-primary\" (click)=\"localReference(testReference)\" #testReference>Local Reference</button>\n</div>\n\n<!--created directive-->\n<p serverDirective>hello</p>\n\n<!--created directive using renderer-->\n<p BetterServerDirective>hello</p>\n\n\n<!--created directive using renderer specify color-->\n<p highlightColor=\"red\" defaultColor=\"blue\" BetterServerDirective>hello</p>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-aac1f0d36775895e0c73c24d455d0ae4479cdbc99e0e5767e2ddccccdce8fb54de3aeeedb35257250f71155c10d70ea0377c0a65672b7c06cae3968f8743bcd4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "/**\n * Bundle different pieces of your \n * app into packages\n * gives angle info which features does\n * my app has and use\n */\n\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { ServerComponent } from './server/server.component';\nimport {FormsModule} from '@angular/forms'\nimport { NgbModule } from '@ng-bootstrap/ng-bootstrap';\nimport { serverDirective } from './server/server.directive';\nimport { BetterServerDirective } from './better-server.directive';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  /*\n  * all of our componenents and directives\n  */\n  declarations:[\n    AppComponent,\n    ServerComponent,\n    serverDirective,\n    BetterServerDirective,\n    ButtonComponent\n  ],\n  imports: [\n    BrowserModule,\n    NgbModule,\n    FormsModule\n  ],\n  providers: [],\n  /**\n   * responsible for which componenent\n   * when the app starts\n   */\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "BetterServerDirective"
+                        },
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "ServerComponent"
+                        },
+                        {
+                            "name": "serverDirective"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "args => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/app/button/button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "args => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n})"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 1,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/better-server.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "BetterServerDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/server/server.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ServerComponent",
+                "coveragePercent": 11,
+                "coverageCount": "2/17",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/server/server.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "serverDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
